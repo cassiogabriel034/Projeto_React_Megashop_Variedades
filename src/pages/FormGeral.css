@@ -1,0 +1,169 @@
+/* --- Formulário Geral e de Solicitação --- */
+
+/* Cor base para parágrafos dentro da seção de formulários */
+.formulario_solicitar p {
+    color: var(--cinza);
+    /* HISTÓRICO: Margem inferior substituída no JSX pela classe 'mb-4' do Bootstrap */
+    /* margin-bottom: 25px; */
+}
+
+/* HISTÓRICO: O flexbox e o espaçamento vertical do formulário foram substituídos no JSX pelas classes 'd-flex flex-column gap-4' do Bootstrap */
+/*
+.formulario_solicitar form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 
+*/
+
+/* HISTÓRICO: O alinhamento e flexbox dos grupos de inputs foram substituídos no JSX pelas classes 'text-start mb-3' do Bootstrap */
+/*
+.form_grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+} 
+*/
+
+/* Estilização dos rótulos (labels) acima dos campos de entrada */
+.form_grupo label {
+    font-weight: bold;
+    color: var(--preto);
+    display: block; /* Garante que o rótulo ocupe toda a largura da linha */
+    margin-bottom: 8px; /* Mantém o espaçamento vertical entre o rótulo e o campo de entrada */
+}
+
+/* --- Inputs e Caixas de Texto (MANTIDOS) --- */
+
+/* Estilização padronizada para os campos de texto, senha, e-mail, telefone e textarea */
+.form_grupo input[type="password"],
+.form_grupo input[type="text"],
+.form_grupo input[type="email"],
+.form_grupo input[type="tel"],
+.form_grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--cinza);
+    border-radius: 6px;
+    background-color: var(--branco_cinza);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Transição suave para o efeito de foco */
+}
+
+/* Destaque visual (borda e sombra) quando o usuário clica ou digita no campo */
+.form_grupo input[type="password"]:focus,
+.form_grupo input[type="text"]:focus,
+.form_grupo input[type="email"]:focus,
+.form_grupo input[type="tel"]:focus,
+.form_grupo textarea:focus {
+    border-color: var(--amarelo_escuro);
+    outline: none;
+    background-color: var(--branco);
+    box-shadow: 0 0 5px rgba(186, 142, 35, 0.3);
+}
+
+/* --- Caixas de Seleção (Checkboxes) --- */
+
+/* Alinhamento horizontal flexível para os itens de marcação (checkbox + label) */
+.checkbox_tipo {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Dimensões e ponteiro do mouse para a caixa de seleção */
+.checkbox_tipo input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Estilo e ponteiro do mouse para o texto explicativo da caixa de seleção */
+.checkbox_tipo label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* --- Botões do Formulário --- */
+
+/* HISTÓRICO: O layout flexível do contêiner de botões foi substituído no JSX pelas classes 'd-flex flex-wrap gap-3 mt-2' do Bootstrap */
+/*
+.form_botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 10px;
+} 
+*/
+
+/* Botão principal de envio (Submit) com fundo verde */
+.form_botoes input[type="submit"] {
+    flex: 1 1 180px; /* Garante flexibilidade para ajustar largura responsivamente */
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animação interativa de elevação e sombra ao passar o mouse sobre o botão de envio */
+.form_botoes input[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Botões secundários de ação (como "Limpar Formulário" ou alternar entre Login/Cadastro) */
+.form_botoes button[type="button"],
+.form_botoes input[type="reset"] {
+    flex: 1 1 180px;
+    background-color: var(--branco_cinza);
+    color: var(--preto);
+    border: 1px solid var(--cinza);
+    padding: 14px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Altera a cor de fundo ao passar o mouse nos botões secundários */
+.form_botoes button[type="button"]:hover,
+.form_botoes input[type="reset"]:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Container de Alertas e Erros --- */
+
+/* Oculta completamente o bloco quando não existem validações de erro ativas */
+.erros-ocultos {
+    display: none;
+}
+
+/* Caixa destacada com fundo claro e borda lateral vermelha para mensagens de erro */
+.container-erros-visivel {
+    /* HISTÓRICO: display, padding, margin-bottom e border-radius foram substituídos no JSX pelas classes 'd-block p-3 mb-4 rounded' do Bootstrap */
+    background-color: #fdf2f2;
+    border-left: 4px solid #de3545;
+}
+
+/* Estilização da lista de itens de erro */
+.container-erros-visivel ul {
+    /* HISTÓRICO: padding-left foi substituído no JSX pela classe 'ps-4' do Bootstrap */
+    list-style-type: square;
+}
+
+/* Cor e tamanho da fonte das mensagens individuais de erro */
+.container-erros-visivel li {
+    /* HISTÓRICO: margin-bottom foi substituído no JSX pela classe 'mb-1' do Bootstrap */
+    color: #ba2532;
+    font-size: 0.9rem;
+}
