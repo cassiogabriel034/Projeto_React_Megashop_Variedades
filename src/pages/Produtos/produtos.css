@@ -1,0 +1,109 @@
+/* --- ESTILOS PRINCIPAIS DA PÁGINA --- */
+
+/* Escopo geral da página que envolve a lista completa de produtos */
+#pagina_produtos {
+    background-color: var(--branco);
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Aplica uma sombra suave nas bordas externas */
+}
+
+/* Formata o contêiner interno que separa os produtos por macrocategorias */
+#pagina_produtos section {
+    background-color: transparent;
+    box-shadow: none;
+    /* AQUI ESTÁ A CORREÇÃO PRINCIPAL: width: 100% impede a centralização forçada e corrige bugs no Grid do Bootstrap */
+    width: 100%; 
+    text-align: left; /* Garante que os títulos das categorias fiquem alinhados à esquerda */
+}
+
+/* --- ESTILOS INDIVIDUAIS DOS CARDS DE PRODUTOS --- */
+
+/* O container do card do produto utiliza flexbox para distribuir o espaço verticalmente */
+.produto_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o conteúdo de texto para o fim (base) e a imagem para o topo */
+    height: 100%; /* Garante que o card ocupe 100% da altura da coluna do Grid */
+}
+
+/* Área que envolve a miniatura do produto */
+.img_prod_container {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* Define as dimensões da imagem do produto dentro do card */
+.produto_container img {
+    /* Altura reduzida de 297px para 220px para não bugar o tamanho e quebrar o alinhamento no Grid */
+    height: 220px; 
+    width: 100%;
+    object-fit: contain; /* Ajusta a imagem sem distorcer suas proporções reais */
+}
+
+/* --- TIPOGRAFIA E CORES (Cards de Produtos) --- */
+
+/* Formatação do título do produto */
+.produto_nome {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--preto);
+    margin-bottom: 16px;
+}
+
+/* Margem para o preço original riscado */
+.produto_preco {
+    margin-bottom: 4px;
+}
+
+/* Estilo do preço original riscado (tag <s>) indicando que não é mais válido */
+.produto_preco s {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* Destaque principal para o novo preço já com o desconto aplicado */
+.produto_preco_desconto {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--preto);
+    margin-bottom: 4px;
+}
+
+/* Exibição informativa da condição de pagamento via cartão de crédito */
+.pagamento_credito {
+    font-size: 14px;
+    color: var(--cinza);
+    margin-bottom: 4px;
+}
+
+/* Exibição destacada da condição de pagamento à vista (Pix/Boleto) */
+.pagamento_boleto {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--amarelo_escuro);
+    margin-bottom: 4px;
+}
+
+/* --- ESTILOS DO SPINNER DE CARREGAMENTO (LOADING) --- */
+
+/* Estiliza o ícone central exibido durante as chamadas à API */
+.loading {
+    font-size: 3rem; 
+    margin: 150px auto; 
+    color: var(--cinza); 
+    animation: spin 1s linear infinite; /* Invoca a animação descrita abaixo de forma contínua (loop) */
+}
+
+/* Define a regra de animação que faz o ícone de Loading rotacionar 360 graus */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

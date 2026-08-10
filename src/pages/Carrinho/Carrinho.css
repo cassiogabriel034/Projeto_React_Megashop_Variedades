@@ -1,0 +1,111 @@
+/* --- ESTRUTURA PRINCIPAL E ANIMAÇÃO (MANTIDOS) --- */
+
+/* Estilo principal do contêiner do carrinho (Sidebar lateral direita) */
+.cart {
+    width: 100%;
+    max-width: 270px;
+    background-color: white;
+    height: 100vh;
+    position: fixed; /* Fixa o carrinho na tela, sobrepondo o conteúdo principal */
+    top: 0; right: 0;
+    padding: 100px 20px 20px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    
+    /* Esconde o carrinho jogando-o para fora da tela (à direita) */
+    transform: translate(110%, 0); 
+    transition: all 1s ease; /* Cria a animação suave de entrada e saída */
+}
+
+/* Classe ativada dinamicamente via JSX para deslizar o carrinho para dentro da tela */
+.cart_active {
+    transform: translate(0, 0);
+}
+
+/* Estilização da área inferior de resumo financeiro (Valor Total) */
+.cart_resumo {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 35px 0 15px;
+    border-top: 1px solid #ddd;    
+}
+
+/* Área central que envolve a lista de produtos. O flex-grow permite ocupar 
+   todo o espaço livre, e o overflow gera a barra de rolagem se houver muitos itens */
+.cart_items {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+/* Remove a borda inferior do último item da lista para manter o visual limpo */
+.cart_items .cart_item:last-child {
+    border-bottom: none !important; /* Adicionado !important para sobrescrever o Bootstrap neste caso específico */
+}
+
+/* Título superior interno da aba do carrinho */
+.cart_items_title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 15px 0 20px; margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;    
+}
+
+/* Mantém uma largura fixa padronizada para as miniaturas dos produtos no carrinho */
+.cart_item_image {
+    width: 70px;
+}
+
+/* --- ESTILOS SUBSTITUÍDOS PELO BOOTSTRAP (COMENTADOS) --- */
+
+/* HISTÓRICO: Todo o bloco abaixo referente à formatação interna dos itens do carrinho foi desativado. O layout (alinhamentos, flexbox, espaçamentos, fontes e cores) foi totalmente substituído no JSX pelo uso direto das classes utilitárias do Bootstrap (como d-flex, align-items-start, position-absolute, text-muted, etc). */
+/*
+.cart_item {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cart_item_title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+}
+
+.cart_item_price {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.cart_item-content {
+    padding: 0 35px 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button_remove_item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #d83232;
+    font-size: 1.4rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cart_item_quantia {
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.cart_item_data {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5); 
+    margin-top: 2px;
+}
+*/
