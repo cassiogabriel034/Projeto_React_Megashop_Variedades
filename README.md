@@ -1,16 +1,64 @@
-# React + Vite
+# 🛒 Megashop Variedades — E-commerce React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Uma aplicação web moderna e responsiva de e-commerce (SPA) desenvolvida para simular um ecossistema completo de marketplace.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+* **React.js** (com Vite)
+* **React Router DOM** (Navegação SPA)
+* **Context API** (Gerenciamento de Estado Global)
+* **Bootstrap 5 & CSS Customizado** (Layout e Responsividade)
+* **DummyJSON API** (Consumo de dados de produtos em tempo real)
+* **LocalStorage** (Persistência do carrinho de compras e dados)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* 🛍️ **Catálogo de Produtos:** Exibição dinâmica por categorias consumidas via API REST.
+* 🔍 **Busca em Tempo Real:** Filtragem instantânea de produtos no catálogo.
+* 🛒 **Carrinho de Compras Interativo:** Drawer/gaveta lateral com controle de quantidade, cálculo de total e persistência de dados.
+* 🔐 **Autenticação & Formulários:** Telas de Login, Cadastro e Solicitação com validação de dados e feedback visual em tempo real.
+* 📱 **Layout Totalmente Responsivo:** Adaptado para dispositivos Mobile, Tablet e Desktop.
+
+---
+
+## 🛠️ Como Executar o Projeto
+
+Siga os passos abaixo para rodar a aplicação localmente em sua máquina:
+
+### 1. Clonar o repositório
+```bash
+git clone [https://github.com/cassiogabriel034/Projeto_React_Megashop_Variedades.git](https://github.com/cassiogabriel034/Projeto_React_Megashop_Variedades.git)
+
+### 2. Acessar a pasta do projeto
+```bash
+cd Projeto_React_Megashop_Variedades
+
+### 3. Instalar as dependências
+* ⚠️ Nota importante: A pasta node_modules não é enviada para o GitHub (está no .gitignore). Por isso, execute o comando abaixo para baixar e instalar todas as dependências necessárias do projeto:
+```bash
+npm install
+
+### 4. Iniciar o servidor de desenvolvimento
+```Bash
+npm run dev
+
+* Após o comando, acesse o link gerado no seu terminal (geralmente http://localhost:5173) para visualizar o projeto rodando no seu navegador.
+
+---
+
+# 📂 Estrutura do Projeto
+
+src/
+├── api/            # Configurações e chamadas à API RESTful
+├── components/     # Componentes reutilizáveis (Header, Footer, ErrosForm)
+├── contexto/       # Context API para gerenciamento de estado global
+├── pages/          # Páginas da aplicação (Home, Produtos, Carrinho, Usuario, Solicitacao)
+├── App.jsx         # Definição de rotas da aplicação
+└── main.jsx        # Ponto de entrada do React
+Desenvolvido por Cássio Gabriel 🚀
+
+---
