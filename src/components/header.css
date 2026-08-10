@@ -1,0 +1,195 @@
+/* --- Cabeçalho e Logo --- */
+
+/* Cor de fundo principal do cabeçalho */
+.cabecalho {
+    /* HISTÓRICO: Largura e padding substituídos no JSX pelas classes 'w-100 p-0' do Bootstrap */
+    /* width: 100%; padding: 0px; */
+    background-color: var(--branco);
+}
+
+/* HISTÓRICO: O layout do contêiner principal foi substituído no JSX pelas classes 'w-100 d-flex justify-content-center align-items-center px-4' do Bootstrap */
+/* 
+.container {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0 40px; 
+    box-sizing: border-box;
+} 
+*/
+
+/* Tamanho base da fonte para a área da logo e autenticação */
+.logo_container {
+    /* HISTÓRICO: padding, display, justify, align, gap, margin e position foram substituídos no JSX por classes utilitárias do Bootstrap */
+    font-size: 16px;
+}
+
+/* Tamanho fixo mantido especificamente para a imagem da logo */
+.logo_container img {
+    width: 60px; 
+}
+
+/* Ícone/Botão de usuário genérico (comportamento de interação) */
+.usuario {
+    font-size: 3.5rem;
+    background-color: none;
+    background: none;
+    border: none;
+    /* HISTÓRICO: display, justify, align, position, left substituídos por layout em flexbox no Bootstrap */
+    cursor: pointer;
+    transition: 800ms;
+} 
+
+/* Efeito de aumento ao passar o mouse no ícone de usuário */
+.usuario:hover {
+    transform: scale(1.15);
+}
+
+/* --- Menu de Navegação --- */
+
+/* Cor de fundo da barra de navegação inferior */
+.menu_cabecalho {
+    background-color: var(--preto);
+    /* HISTÓRICO: padding substituído no JSX pelas classes 'py-3 px-3' do Bootstrap */
+    /* padding: 20px 16px; */
+}
+
+/* HISTÓRICO: O flexbox da lista de links foi substituído no JSX pelas classes 'd-flex justify-content-center align-items-center text-center gap-4 m-0 p-0 list-unstyled' do Bootstrap */
+/*
+.menu_cabecalho ul {
+    display: flex; 
+    justify-content: center; 
+    text-align: center; 
+    align-items: center; 
+    gap: 30px; 
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+} 
+*/
+
+/* Estilização base para os links do menu de navegação */
+.menu_cabecalho a {
+    font-size: 16px;
+    font-style: normal;
+    color: var(--branco);
+    /* HISTÓRICO: Remoção do sublinhado passada para o Bootstrap usando a classe 'text-decoration-none' */
+    /* text-decoration: none; */
+    transition: 0.5s;
+}
+
+/* Destaque visual (negrito e leve aumento) ao passar o mouse sobre os links */
+.menu_cabecalho a:hover {
+    font-weight: bold;    
+    font-size: 18px;      
+}
+
+/* --- Pesquisa interna no Menu --- */
+
+/* HISTÓRICO: O layout da barra de pesquisa foi substituído no JSX pelas classes 'd-flex justify-content-center text-center align-items-center mt-3' do Bootstrap */
+/*
+.pesquisa {
+    display: flex; 
+    justify-content: center; 
+    text-align: center; 
+    align-items: center; 
+    margin-top: 20px; 
+} 
+*/
+
+/* Dimensões específicas mantidas para o campo de input da pesquisa */
+.pesquisa input {
+    height: 40px; 
+    width: 40%;  
+    /* HISTÓRICO: padding e border-radius foram passados para o Bootstrap via classes 'px-3 py-1 rounded' */
+    border: none;
+}
+
+/* --- Carrinho de Compras --- */
+
+/* Botão principal do carrinho (ao lado da busca) */
+.carrinho_btn {
+    /* HISTÓRICO: display, align, justify, padding, position e margin foram substituídos por classes do Bootstrap */
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background: var(--amarelo_escuro);
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de escurecimento ao passar o mouse no botão do carrinho */
+.carrinho_btn:hover {
+    background: #96731a;
+}
+
+/* Indicador visual de quantidade de itens no carrinho (Badge) */
+.carrinho_status {
+    background-color: red;
+    width: 15px; 
+    height: 15px;
+    /* HISTÓRICO: position, top, left, display, align e justify passados para o Bootstrap */
+    color: white;
+    font-size: 11px; 
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+/* --- Área de Login e Usuário no Header --- */
+
+/* HISTÓRICO: O layout do grupo de usuário foi substituído no JSX pelas classes 'd-flex align-items-center gap-2 ms-auto' do Bootstrap */
+/*
+.area_usuario {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-left: auto;
+} 
+*/
+
+/* Estilo do botão de link para "Entrar" */
+.btn_login_link {
+    /* HISTÓRICO: display, align, gap, padding e border-radius configurados no JSX via 'd-flex align-items-center gap-2 px-3 py-1 rounded-pill' */
+    color: var(--preto);
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Inversão de cores ao focar no link de login */
+.btn_login_link:hover {
+    background-color: var(--branco_cinza);
+    color: var(--amarelo_escuro);
+}
+
+/* HISTÓRICO: Contêiner de saudação e logout substituído no JSX por 'd-flex align-items-center gap-2' */
+/*
+.usuario_logado_container {
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+} 
+*/
+
+/* Destaque para o nome do usuário logado na interface */
+.nome_usuario {
+    font-weight: bold;
+    color: var(--amarelo_escuro);
+    font-size: 15px;
+}
+
+/* Botão vermelho de Sair/Logout */
+.btn_logout {
+    /* HISTÓRICO: display, align, gap, padding e border-radius foram atribuídos via Bootstrap no JSX */
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Escurecimento do botão de Sair no estado hover */
+.btn_logout:hover {
+    background-color: #c0392b;
+}

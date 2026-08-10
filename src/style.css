@@ -1,0 +1,67 @@
+/* --- VARIÁVEIS GLOBAIS DE CORES --- */
+/* Declaração de variáveis CSS globais no escopo :root para padronizar a paleta de cores em toda a aplicação */
+:root {
+    --branco: #ffffff;
+    --preto: #000000;
+    --branco_cinza: #f3f3f3;
+    --cinza: #777;
+    --amarelo_escuro: #ba8e23;
+    --verde: #2ECC71;
+    --verda_claro: #ccffcc;
+}
+
+/* --- RESET CSS GLOBAL --- */
+/* Zera os espaçamentos padrão do navegador e garante que a largura/altura dos elementos inclua bordas e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- CONTÊINER RAIZ DO REACT --- */
+/* Seletor reservado para o contêiner no qual a aplicação React é montada */
+#root {
+    /* Mantido para eventuais ajustes estruturais diretos no nó raiz da aplicação */
+}
+
+/* --- ESTILOS DO CORPO DA PÁGINA (BODY) --- */
+/* Define as regras base para todo o documento HTML */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--branco_cinza);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Ocupa no mínimo 100% da altura da tela visualizada */
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- LAYOUT DO CONTEÚDO PRINCIPAL --- */
+
+/* Estrutura base utilizada como invólucro para o conteúdo das páginas */
+.conteudo_principal {
+    display: flex;
+    max-width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espaçamento padrão entre os elementos internos */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex: 1; /* Garante que o conteúdo expanda e empurre o rodapé (footer) para a base da tela */
+}
+
+/* Estilização genérica para seções colocadas dentro do conteúdo principal */
+.conteudo_principal section {
+    max-width: 100%;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra leve para criar destaque visual de cartão */
+}
+
+/* Define a margem inferior para os títulos h2 contidos nas seções principais */
+.conteudo_principal section h2 {
+    margin-bottom: 16px;
+}

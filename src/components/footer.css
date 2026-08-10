@@ -1,0 +1,93 @@
+/* --- Rodapé Principal --- */
+
+/* Cor de fundo principal do rodapé */
+.rodape {
+    /* HISTÓRICO: Largura, espaçamentos e flexbox foram substituídos no JSX pelas classes 'w-100 d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 py-3' do Bootstrap */
+    /* 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 35px; 
+    padding: 16px 0px; 
+    */
+    background-color: var(--amarelo_escuro);
+}
+
+/* HISTÓRICO: Alinhamento das colunas substituído no JSX pela classe 'align-self-md-stretch' do Bootstrap */
+/* 
+.rodape > div {
+    align-self: stretch;
+} 
+*/
+
+/* Adiciona uma linha divisória vertical estilizada entre os blocos de conteúdo no layout de desktop */
+.rodape > div + div {
+    border-left: 2px solid var(--branco);
+    padding-left: 35px;
+}
+
+/* Cor padrão para os títulos (h3) dentro do rodapé */
+.rodape h3 {
+    /* HISTÓRICO: Margens substituídas no JSX pelas classes 'mt-0 mb-2' do Bootstrap */
+    /* 
+    margin-top: 0; 
+    margin-bottom: 10px; 
+    */
+    color: var(--branco);
+}
+
+/* Cor padrão para os parágrafos (p) dentro do rodapé */
+.rodape p {
+    /* HISTÓRICO: Margens substituídas no JSX pelas classes 'm-0 mb-2' do Bootstrap */
+    /* 
+    margin: 0; 
+    margin-bottom: 10px; 
+    */
+    color: var(--branco);
+}
+
+/* HISTÓRICO: Remoção de margem final substituída no JSX pela classe 'mb-0' diretamente no elemento */
+/* 
+.rodape p:last-child {
+    margin-bottom: 0;
+} 
+*/
+
+/* --- Redes Sociais --- */
+
+/* HISTÓRICO: O flexbox dos ícones foi substituído no JSX pelas classes 'd-flex justify-content-center align-items-center gap-3' do Bootstrap */
+/* 
+.icones_redes {
+    display: flex;     
+    justify-self: center;   
+    align-items: center;  
+    gap: 16px;            
+} 
+*/
+
+/* Estilização base e transição de tempo para a animação dos ícones de redes sociais */
+.icones_redes .img {
+    font-size: 2rem;      
+    color: white;            
+    object-fit: contain;  
+    transition: 0.5s;
+}
+
+/* Efeito interativo de aumento (zoom in) ao passar o mouse sobre os ícones */
+.icones_redes .img:hover {
+    transform: scale(1.2);
+}
+
+/* --- Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+    /* HISTÓRICO: Flex-direction e text-align agora são cuidados pelo Bootstrap (flex-column, text-center) */
+    
+    /* Modifica a linha divisória de vertical para horizontal em telas menores, adaptando ao layout empilhado */
+    .rodape > div + div {
+        border-left: none;
+        border-top: 2px solid var(--branco);
+        padding-left: 0;
+        padding-top: 25px;
+    }
+}
