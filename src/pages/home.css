@@ -1,0 +1,50 @@
+/* --- ESCOPO PRINCIPAL DA PÁGINA HOME --- */
+
+/* Estiliza o contêiner principal da página inicial (Sobre Nós) */
+#pagina_home {
+    background-color: var(--branco);
+    border-radius: 8px; /* Aplica bordas levemente arredondadas ao contêiner */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Adiciona uma sombra suave para destacar o bloco em relação ao fundo da tela */
+}
+
+/* Regras específicas para os blocos de seção (Nossa História, Localização e Pagamento) */
+#pagina_home section {
+    background-color: transparent; /* Remove qualquer cor de fundo herdada */
+    box-shadow: none; /* Garante que as seções internas não tenham sombras individuais */
+    
+    /* AQUI: Garantimos que o Bootstrap controle 100% da largura, evitando o vazamento e quebra de layout no sistema de Grid */
+    max-width: 100%; 
+}
+
+/* --- CORES E TIPOGRAFIA --- */
+/* Classes customizadas criadas para manter a identidade visual, substituindo utilitários de texto do Bootstrap */
+
+/* Título principal da página (<h1> "Sobre Nós") */
+.home_titulo {
+    font-weight: bold;
+    color: var(--preto);
+}
+
+/* Subtítulo introdutório exibido logo abaixo do título principal */
+.home_subtitulo {
+    font-size: 1.25rem; 
+    color: var(--cinza); 
+}
+
+/* Títulos secundários (<h3>) das três colunas de informação */
+.home_secao_titulo {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: var(--preto);
+}
+
+/* Estilização do texto descritivo dos parágrafos dentro das colunas */
+.home_texto {
+    color: var(--cinza); 
+    line-height: 1.8; /* Aumenta o espaçamento entre as linhas para tornar a leitura mais confortável */
+}
+
+/* Define a cor padrão de destaque para os ícones do React Bootstrap Icons (Shop, GeoAlt, CreditCard) */
+.home_icone {
+    color: var(--amarelo_escuro); 
+}
