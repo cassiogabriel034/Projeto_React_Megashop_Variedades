@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BagFill, PersonCircle, BoxArrowRight } from 'react-bootstrap-icons';
 import { useContext } from 'react';
 import contexto from '../contexto/contexto';
+import logoAtersantao from '../assets/imagens/logo_atersantao.png';
 
 /**
  * Cabeçalho principal da aplicação.
@@ -41,7 +42,7 @@ function Header() {
         
         {/* Container da Logo, Título e Botões de Usuário */}
         <div className="logo_container py-3 d-flex justify-content-center align-items-center gap-3 mb-0 position-relative">
-          <img src="/imagens/logo_atersantao.png" alt="MegaShop Variedades" />
+          <img src={logoAtersantao} alt="MegaShop Variedades" />
           <h1 className="m-0">MegaShop Variedades</h1>
 
           {/* Área de Autenticação (Login/Logout) posicionada ao lado do título */}
