@@ -1,11 +1,10 @@
----
 # 🛒 Megashop Variedades — E-commerce React
 
 Uma aplicação web moderna e responsiva de e-commerce (SPA) desenvolvida para simular um ecossistema completo de marketplace.
-Feito como trabalho final da Integração de Competências Profissionais do Curso de Front-end do Senai
+Feito como trabalho final da Integração de Competências Profissionais do Curso de Front-end do Senai.
 
-Link do Aplicação:
- https://cassiogabriel034.github.io/Projeto_React_Megashop_Variedades/#/
+**Link da Aplicação:**  
+https://cassiogabriel034.github.io/Projeto_React_Megashop_Variedades/#/
 
 ---
 ## 🚀 Tecnologias Utilizadas
