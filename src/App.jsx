@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,7 +17,9 @@ function App() {
     /* O Provedor envolve toda a aplicação para que o estado global seja acessível em qualquer página */
     <Provedor>
       
-      {/* BrowserRouter habilita o uso de rotas e histórico de navegação */}
+      {/* HashRouter habilita o uso de rotas e histórico de navegação */
+      /*O HashRouter é utilizado no lugar do BrowserRouter para garantir a compatibilidade 
+      das rotas com o GitHub Pages, evitando erros 404 ao recarregar a página.*/}
       <HashRouter>
         
         {/* O Header fica fora do <Routes> para ser renderizado fixamente em todas as páginas */}
