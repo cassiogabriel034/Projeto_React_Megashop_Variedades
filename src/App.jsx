@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,7 +18,7 @@ function App() {
     <Provedor>
       
       {/* BrowserRouter habilita o uso de rotas e histórico de navegação */}
-      <BrowserRouter>
+      <HashRouter>
         
         {/* O Header fica fora do <Routes> para ser renderizado fixamente em todas as páginas */}
         <Header />
@@ -34,7 +34,7 @@ function App() {
         {/* O Footer também fica fora do <Routes> para ser exibido em todas as páginas */}
         <Footer />
         
-      </BrowserRouter>
+      </HashRouter>
     </Provedor>
   );
 }
